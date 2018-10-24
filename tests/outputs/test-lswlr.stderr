@@ -1,0 +1,44 @@
+sim-safe: Version 0.2.0 of January, 1997.
+Copyright (c) 1994-1997 by Todd M. Austin.  All Rights Reserved.
+
+
+sim: simulation started @ Mon Jan 27 13:19:09 1997, options follow:
+
+sim-safe: This simulator implements a functional simulator.  This
+functional simulator is the simplest, most user-friendly simulator in the
+simplescalar tool set.  Unlike sim-fast, this functional simulator checks
+for all instruction errors, and the implementation is crafted for clarity
+rather than speed.
+
+# -config                     # load configuration from a file
+# -dumpconfig                 # dump configuration to a file
+# -h                    false # print help message    
+# -v                    false # verbose operation     
+# -d                    false # enable debug message  
+# -i                    false # start in Dlite debugger
+-seed                       1 # random number generator seed (0 for timer seed)
+# -q                    false # initialize and terminate immediately
+
+sim: ** starting functional simulation **
+
+sim: ** simulation statistics **
+sim_num_insn                   7142 # total number of instructions executed
+sim_num_refs                   3957 # total number of loads and stores executed
+sim_elapsed_time                  1 # total simulation time in seconds
+sim_inst_rate             7142.0000 # simulation speed (in insts/sec)
+ld_text_base             0x00400000 # program text (code) segment base
+ld_text_size                  71296 # program text (code) size in bytes
+ld_data_base             0x10000000 # program initialized data segment base
+ld_data_size                   8048 # program init'ed `.data' and uninit'ed `.bss' size in bytes
+ld_stack_base            0x7fffc000 # program stack segment base (highest address in stack)
+ld_stack_size                 16384 # program initial stack size
+ld_prog_entry            0x00400140 # program entry point (initial PC)
+ld_environ_base          0x7fff8000 # program environment base address address
+ld_target_big_endian              1 # target executable endian-ness, non-zero if big endian
+mem_brk_point            0x10007000 # data segment break point
+mem_stack_min            0x7fff7548 # lowest address accessed in stack segment
+mem_total_data                   8k # total bytes used in init/uninit data segment
+mem_total_heap                  21k # total bytes used in program heap segment
+mem_total_stack                 19k # total bytes used in stack segment
+mem_total_mem                   48k # total bytes used in data, heap, and stack segments
+
